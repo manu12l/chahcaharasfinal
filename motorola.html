@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/styles-icons.css">
+  <link rel="stylesheet" href="css/styles-index.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/crud.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="productos" href="Productos.json">
+  <title>Celulares</title>
+  <style>
+    #espacio {
+
+      margin-top: 100px;
+
+
+    }
+    #color{
+      background-color: whitesmoke;
+      margin-left: 8%;
+      margin-right: 8%;
+      padding-bottom: 50px;;
+    }
+    #izquierda{
+      
+      width: 40%;
+      float: left;
+      padding-right: 10px;
+    }
+    #derecha{
+      
+      width: 60%;
+      float: left;
+    }
+
+    #imagenes {
+      width: 300px;
+      height: 400px;
+      margin-left: 5%;
+      margin-right: 5%;
+
+    }
+    #estrella {
+      font-size: 30px;
+      color: yellow;
+
+    }
+    #estre {
+      font-size: 30px;
+     
+
+    }
+
+    #tablaPersonas {
+
+      margin-top: 20px;
+      ;
+    }
+  </style>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header>
+    <div class="navbar navbar-expand-lg navbar-dark bg-dark ">
+      <div class="container">
+        <a href="#" class="navbar-brand ">
+
+          <strong>ShopIta</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
+          aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarHeader">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="index_user.html" class="nav-link active">Inicio</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="accesorios_user.html" class="nav-link active">Acessorios</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="celulares_user.html" class="nav-link active">Celulares</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="tablet_user.html" class="nav-link active">Tablets</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="laptop_user.html" class="nav-link active">Laptos</a>
+            </li>
+
+          </ul>
+          <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="encrypted"
+              value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+            <input type="image" src="https://www.sandbox.paypal.com/es_XC/i/btn/btn_viewcart_SM.gif" border="0"
+              name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+          </form>
+          <li class="nav-item">
+            <input type="text" id="formulario">
+            <button class="btn btn-info" id="boton">buscar</button>
+          </li>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <br><br>
+    
+    <br><br>
+
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-1 g-3" id="color">
+          <div id="izquierda">
+            <img src="https://i.ibb.co/d6RQ2Nv/moto-g82.jpg" id="imagenes">
+          </div>
+             
+        
+            <div id="derecha">
+              <div class="card-body">
+                <div id="tit">
+
+                </div>
+                <form>
+                  <p class="clasificacion">
+                    
+                      <label id="estrella" for="radio1">★</label><!--
+                    
+                    --><label id="estrella" for="radio2">★</label><!--
+                  
+                    --><label id="estrella" for="radio3">★</label><!--
+                    -
+                    --><label id="estrella" for="radio4">★</label><!--
+                   ¿
+                    --><label id="estrella" for="radio5">★</label>
+                  </p>
+                </form>
+  
+                <div class="d-flex justify-content-between align-items-center"></div>
+                <div class="col-lg-12">
+  
+                  <button id="tec" type="button" class="btn btn-success" data-toggle="modal">ver detalles</button>
+                  <br><br>
+                  
+                  
+                  <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="PGACRT38LCGNL">
+                    <input type="image" src="https://www.sandbox.paypal.com/es_XC/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
+                    </form>
+                    
+  
+                </div>
+  
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="table-responsive">
+                        <table id="tablaPersonas" class="table table-striped table-bordered table-condensed"
+                          style="width:100% ">
+  
+                          <tbody id="tr">
+  
+  
+  
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="table-responsive">
+                        <table id="tablaPersonas" class="table table-striped table-bordered table-condensed"
+                          style="width:100% ">
+  
+                          <tbody id="rese">
+  
+                            Reseñas:
+  
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <form action="" target="_blank">
+  
+                    <p>Escribir Reseña:</p>
+  
+                    <p><textarea name="comentarios" required></textarea></p>
+  
+                    <p> <button id="resp" type="button" class="btn btn-success" data-toggle="modal">Enviar</button>
+                    </p>
+  
+                  </form>
+                 
+                </div>
+  
+              </div>
+            </div>
+
+            
+          </div>
+
+        </div>
+
+        
+          <!--  fin -->
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+
+
+  <!--Modal para CRUD-->
+
+  </div>
+
+  <footer class="container py-5 my-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md-3 order-2 order-md-1">
+        <small class="d-block text-muted">© 2022-2023 ShopITA</small>
+      </div>
+      <div class="col-6 col-md-3 order-1 order-md-2">
+        <h5>Características</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted">Veloces</a></li>
+          <li><a class="text-muted">Rápidos</a></li>
+          <li><a class="text-muted">Confiables</a></li>
+          <li><a class="text-muted">Disponibles</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-3 order-1 order-md-2">
+        <h5>Contactanos</h5>
+        <ul class="list-unstyled text-small">
+          <li><a href="https://www.facebook.com/groups/1282981182245094/?ref=share" class="text-muted">Facebook</a></li>
+          <li><a class="text-muted">shopitaa3@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script src="js/motorola.js"></script>
+  <script src="js/reseña.js"></script>
+  <script src="catalago/motorola.js"></script>
+  <script src="Productos.json"></script>
+  <script src="res.json"></script>
+
+</body>
+
+</html>

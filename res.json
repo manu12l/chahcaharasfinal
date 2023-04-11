@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "nombre":"Aldo Mondragon",
+        "descripción": "Excelente producto, muy recomendado"
+        
+    },
+    {
+        "id": 2,
+        "nombre":"Yair Chavez",
+        "descripción": "Excelente dispositivo! vale más la pena que un gama media actual. Es verdad que la capacidad, duración y carga rápida de la batería es inferior a dispositivos actuales, pero el rendimiento es excepcional!."
+        
+    },
+    {
+        "id": 3,
+        "nombre":"Juan Gaytan",
+    "descripción": "Esta magnífico se calienta un poco pero me imagino que es por que estoy pasando todo el contenido, cumple con lo que ofrece. Es un poco pesado pero esta hermoso en verdad la calidad de ambas pantallas es única"
+    }
+]

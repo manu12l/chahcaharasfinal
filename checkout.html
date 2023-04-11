@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<title>Página de Pago</title>
+</head>
+
+<body class="bg-light">
+	<div class="container">
+		<div class="row">
+			<div class="col py-5 text-center">
+				<h2>Formulario de Pago</h2>
+				<p class="lead">Ingresa los datos correspondientes para realizar la compra.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-md-8 order-2 order-md-1">
+				<h4 class="mb-3">Direccion de Envio</h4>
+				<form action="">
+					<div class="row">
+						<div class="col-12 col-sm-6 mb-3">
+							<label for="nombre">Nombre</label>
+							<input type="text" class="form-control" id="nombre" name="nombre">
+						</div>
+						<div class="col-12 col-sm-6 mb-3">
+							<label for="apellido">Apellido</label>
+							<input type="text" class="form-control" id="apellido" name="apellido">
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<label for="usuario">Usuario</label>
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text">@</span>
+							</div>
+							<input type="text" id="usuario" class="form-control" placeholder="Usuario" name="usuario">
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<label for="correo">Correo <span class="text-muted">(Opcional)</span></label>
+						<input type="email" class="form-control" placeholder="nombre@correo.com" name="correo">
+					</div>
+
+					<div class="mb-3">
+						<label for="direccion">Direccion</label>
+						<input type="text" class="form-control" placeholder="1234 Calle Principal" name="direccion">
+					</div>
+
+					<div class="mb-3">
+						<label for="direccion2">Direccion 2</label>
+						<input type="text" class="form-control" placeholder="Interior o informacion adicional"
+							name="direccion2">
+					</div>
+
+					<div class="row">
+						<div class="col-12 col-sm-4 mb-3">
+							<label for="pais">Pais</label>
+							<select name="pais" id="pais" class="custom-select d-block w-100">
+								<option value="">Seleccionar Pais</option>
+								<option value="mexico">Mexico</option>
+								<option value="españa">España</option>
+								<option value="colombia">Colombia</option>
+							</select>
+						</div>
+						<div class="col-12 col-sm-4 mb-3">
+							<label for="estado">Estado</label>
+							<select name="estado" id="estado" class="custom-select d-block w-100">
+								<option value="">Seleccionar Estado</option>
+								<option value="">-</option>
+							</select>
+						</div>
+						<div class="col-12 col-sm-4 mb-3">
+							<label for="codigo-postal">Codigo Postal</label>
+							<input type="text" id="codigo-postal" class="form-control">
+						</div>
+					</div>
+
+					<hr>
+
+
+					<div id="smart-button-container">
+						<div style="text-align: center;">
+							<div id="paypal-button-container"></div>
+						</div>
+					</div>
+					<br>
+
+					<script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=MXN"
+						data-sdk-integration-source="button-factory"></script>
+					<script>
+						function initPayPalButton() {
+							paypal.Buttons({
+								style: {
+									shape: 'rect',
+									color: 'gold',
+									layout: 'vertical',
+									label: 'paypal',
+
+								},
+
+								createOrder: function (data, actions) {
+									return actions.order.create({
+										purchase_units: [{ "amount": { "currency_code": "MXN", "value": 55.01, "breakdown": { "item_total": { "currency_code": "MXN", "value": 50 }, "shipping": { "currency_code": "MXN", "value": 5 }, "tax_total": { "currency_code": "MXN", "value": 0.01 } } } }]
+									});
+								},
+
+								onApprove: function (data, actions) {
+									return actions.order.capture().then(function (orderData) {
+
+										// Full available details
+										console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+										// Show a success message within this page, e.g.
+										const element = document.getElementById('paypal-button-container');
+										element.innerHTML = '';
+										element.innerHTML = '<h3>Gracias por tu compra, ha salido de forma exitosa!</h3>';
+
+										// Or go to another URL:  actions.redirect('thank_you.html');
+
+									});
+								},
+
+								onError: function (err) {
+									console.log(err);
+								}
+							}).render('#paypal-button-container');
+						}
+						initPayPalButton();
+					</script>
+				</form>
+			</div>
+			<div class="col-12 col-md-4 order-1 order-md-2">
+				<h4 class="mb-3 d-flex justify-content-between align-items-center">
+					<span class="text-muted">Tu Carrito</span>
+					<span class="badge badge-secondary badge-pill">1</span>
+				</h4>
+				<ul class="list-group mb-3">
+					<li class="list-group-item d-flex justify-content-between">
+						<div>
+							<h6 class="my-0">Nombre del Producto</h6>
+							<small class="text-muted">Pequeña Descripcion</small>
+						</div>
+						<span class="text-muted">$12</span>
+					</li>
+					<li class="list-group-item d-flex justify-content-between">
+						<div>
+							<h6 class="my-0">Segundo Producto</h6>
+							<small class="text-muted">Pequeña Descripcion</small>
+						</div>
+						<span class="text-muted">$8</span>
+					</li>
+					<li class="list-group-item d-flex justify-content-between">
+						<div>
+							<h6 class="my-0">Tercer Producto</h6>
+							<small class="text-muted">Pequeña Descripcion</small>
+						</div>
+						<span class="text-muted">$5</span>
+					</li>
+					<li class="list-group-item d-flex justify-content-between bg-light">
+						<div class="text-success">
+							<h6 class="my-0">Codigo de descuento</h6>
+							<small class="text-success">CUPONEJEMPLO</small>
+						</div>
+						<span class="text-success">$-5</span>
+					</li>
+					<li class="list-group-item d-flex justify-content-between bg-light">
+						<span>Total (MX)</span>
+						<strong>$55.01</strong>
+					</li>
+				</ul>
+				<form action="" class="card p-2">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Cupon">
+						<div class="input-group-append">
+							<button class="btn btn-secondary">Canjear</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<footer class="my-5 py-5 text-muted text-center text-small">
+			<p class="mb-1">© 2017-2018 Company Name</p>
+			<ul class="list-inline">
+				<li class="list-inline-item">
+					<a href="#">Privacidad</a>
+				</li>
+				<li class="list-inline-item">
+					<a href="#">Terminos y Condiciones</a>
+				</li>
+				<li class="list-inline-item">
+					<a href="#">Soporte</a>
+				</li>
+			</ul>
+		</footer>
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

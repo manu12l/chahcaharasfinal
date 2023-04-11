@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles-icons.css">
+    <link rel="stylesheet" href="css/styles-index2.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>ShopITA</title>
+</head>
+
+<body>
+    <!--Nav-->
+    <header class="p-3 d-flex flex-column flex-md-row justify-content-between align-items-center border-bottom bg-dark">
+        <h5 class="mt-1 text-white logo">ShopITA</h5>
+        <h5 class="center text-white"> Ordenes de compra</h5>
+
+        <nav>
+            <h5 class="text-muted"><a href="index.html">LogOut</h5></a>
+            <h5 class="nombre"> Bienvenido: User</h5>
+        </nav>
+    </header>
+
+
+    <!--Primer apartado-->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4">
+                <h1>Compras</h1>
+            </div>
+
+        </div>
+        <br />
+        <div>
+            <div class="row">
+                <input type="text" placeholder="Buscar compra" class="redondo">
+                <select class="redondo">
+                    <option value="esteMes">Este mes</option>
+                    <option value="mesPas">Mes pasado</option>
+                    <option value="esteAño">Este año</option>
+                </select>
+                <label class="espaciado" for="">| 4 compras</label>
+                <button id="btnOrdenes" type="button" class="btnOculto" data-toggle="modal">ver detalles</button>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!--Compras-->
+    <div class="py-5 bg-light border-top">
+        <div class="container">
+            <button id="resp" class="btnOculto"></button>
+            <!--Primer producto-->
+            <div class="wishlist-main-content section-ptb">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <form action="#" class="cart-table">
+                                <div class=" table-content table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th class="plantmore-product-thumbnail">Imagen</th>
+                                                <th class="cart-product-name">Producto</th>
+                                                <th class="plantmore-product-price">Precio</th>
+                                                <th class="plantmore-product-stock-status">Cantidad encargada</th>
+                                                <th class="plantmore-product-add-cart">Seguir</th>                                                
+                                                <th class="plantmore-product-remove">Ver detalles</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr id="sony">
+                                                
+                                            </tr>
+                                            <tr id="hua">
+                                               
+                                            </tr>
+                                           
+                                            <tr id="xio">
+                                                
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="container py-5 my-5 border-top">
+        <div class="row">
+            <div class="col-12 col-md-3 order-2 order-md-1">
+                <small class="d-block text-muted">© 2022-2023 ShopITA</small>
+            </div>
+            <div class="col-6 col-md-3 order-1 order-md-2">
+                <h5>Características</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted">Veloces</a></li>
+                    <li><a class="text-muted">Rápidos</a></li>
+                    <li><a class="text-muted">Confiables</a></li>
+                    <li><a class="text-muted">Disponibles</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 order-1 order-md-2">
+                <h5>Contactanos</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a href="https://www.facebook.com/groups/1282981182245094/?ref=share"
+                            class="text-muted">Facebook</a></li>
+                    <li><a class="text-muted">shopitaa3@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ordenes.js"></script>
+    <script src="ordenes/"></script>
+    <script src="ordenes/evgaOrd.js"></script>
+    <script src="ordenes/"></script>
+    <script src="ordenes/xiaomiOrd.js"></script>
+    <script src="ordenes/huaweiOrd.js"></script>
+    <script src="ordenes/sonyOrd.js"></script>
+    
+</body>
+
+</html>

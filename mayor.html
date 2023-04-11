@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styles-icons.css">
+	<link rel="stylesheet" href="css/styles-index.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style>
+		#diseño{
+			font-size: 15px;
+			margin-left: 20px;
+			text-align: center;
+			padding-bottom: 20px;
+			width: 320px;
+			height: 400px;
+			
+		}
+		
+		#orilla{
+			font-size: 15px;
+			float: right;
+			text-align: center;
+			width: 100px;
+			margin-right: 60px;
+			
+			
+			
+		}
+		#barrade{
+			font-size: 15px;
+			float: right;
+			text-align: center;	
+			background-color: black;
+			
+		}
+		
+		
+	</style>
+	<title>ShopITA</title>
+</head>
+
+<body>
+<!--Nav-->
+	<header  class="p-3 d-flex flex-column flex-md-row justify-content-between align-items-center border-bottom bg-dark">
+		<h5  class="mt-1 text-white logo">ShopITA</h5>
+		<h5  class="mt-1 text-white ">Aldo Iván</h5>
+		<nav>
+			<form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" >
+				<input type="hidden" name="cmd" value="_s-xclick">
+				<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+				<input class="mt-1 text-white" type="image"   name="submit" alt="Carrito">
+			</form>
+			<h5  class="mt-1 text-white "><a href="index.html">Cerra sesión</h5></a> 
+		</nav>
+	</header>
+
+<!--Catalogo-->
+	<div style="padding-top: 10px;" class="container">
+		<div class="nav-scroller py-1 mb-4">
+			<nav class="d-flex flex-wrap justify-content-between">
+				<a href="celulares_user.html" class="text-muted mx-2 my-1">Catálogo</a>
+				<a href="#" class="text-muted mx-2 my-1">Servicio al cliente</a>
+				<a href="#" class="text-muted mx-2 my-1">Promociones</a>
+				<a href="#" class="text-muted mx-2 my-1">Moda</a>
+				<a href="Ordenes.html" class="text-muted mx-2 my-1">Ordenes de compra</a>
+				<a href="user-perfil.html" class="text-muted mx-2 my-1">Cuenta</a>
+				
+			</nav>
+		</div>
+	</div>
+
+	<!--Carrusel-->
+	<!--Carrusel-->
+	<div class=" slider bg-light carru-font carrusel">
+		<div class="col">
+			<div class="carousel slide" id="slider" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#slider" data-slide-to="0" class="active"></li>
+					<li data-target="#slider" data-slide-to="1"></li>
+					<li data-target="#slider" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner ">
+					<div class="carousel-item active">
+						<img src="img/slide2.png" alt="Slide #1" class="d-block imgCarru ">
+					</div>
+					<div class="carousel-item">
+						<img src="img/slide3.png" alt="Slide #2" class="d-block imgCarru">
+					</div>
+					<div class="carousel-item">
+						<img src="img/slide1.png" alt="Slide #3" class="d-block imgCarru">
+					</div>
+				</div>
+				<a href="#slider" class="carousel-control-prev bg-light" data-slide="prev">
+				</a>
+				<a href="#slider" class="carousel-control-next" data-slide="next">
+				</a>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+<!--inicio catalago-->
+<div class="py-5 bg-light border-top">
+	<div class="container">
+		<div id="orilla">
+			<div class="btn-group">
+				<button type="button" style="background-color: black; color:white" class="btn btn-default dropdown-toggle"
+						data-toggle="dropdown">
+                        De mayor a menor  <span class="caret"></span>
+				</button>
+			  
+				<ul class="dropdown-menu" role="menu" id="barrade">
+				  <li><a href="index_user.html">Destacados</a></li>
+				  <li><a href="menor.html">De menor a mayor</a></li>
+				  
+				 
+				</ul>
+			  </div>
+
+		</div>
+		<br><br><br>
+        
+		<div class="row">
+            <div class="col-12 col-sm-6 col-md-4">
+				<div class="card mb-4 ">
+					<div id="diseño">
+					<div id="g">
+
+					</div>
+					<br>
+					<a href="gaming.html"><button
+					class="btn btn-sm btn-outline-secondary" id="gam">Ir</button></a>
+				</div>
+				</div>
+			</div>
+            <div class="col-12 col-sm-6 col-md-4">
+				<div class="card mb-4 ">
+					<div id="diseño">
+					<div id="ultimo">
+
+					</div>
+					<br>
+					<a href="xiaomi.html"><button
+					class="btn btn-sm btn-outline-secondary" id="yair">Ir</button></a>
+				</div>
+				</div>
+			</div>
+            <div class="col-12 col-sm-6 col-md-4">
+				<div class="card mb-4 ">
+					<div id="diseño">
+					<div id="sony">
+
+					</div>
+					<br>
+					<a href="sony.html"><button
+					class="btn btn-sm btn-outline-secondary" id="son">Ir</button></a>
+				</div>
+				</div>
+			</div>
+            <div class="col-12 col-sm-6 col-md-4">
+				<div class="card mb-4 ">
+					<div id="diseño">
+					<div id="mot">
+
+					</div>
+					<br>
+					<a href="motorola.html"><button
+					class="btn btn-sm btn-outline-secondary" id="m">Ir</button></a>
+				</div>
+				</div>
+			</div>
+            <div class="col-12 col-sm-6 col-md-4">
+				<div class="card mb-4 ">
+					<div id="diseño">
+					<div id="hp">
+
+					</div>
+					<br>
+					<a href="ph.html"><button
+					class="btn btn-sm btn-outline-secondary" id="h">Ir</button></a>
+				</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-4">
+				<div class="card mb-4 ">
+					<div id="diseño">
+					<div id="sams">
+						
+					</div>
+					<br>
+					<a href="samsumg.html"><button
+					class="btn btn-sm btn-outline-secondary" id="sam">Ir</button></a>
+				</div>
+				</div>
+			</div>
+            <div class="col-12 col-sm-6 col-md-4">
+				<div class="card mb-4 ">
+					<div id="diseño">
+					<div id="hua">
+
+					</div>
+					<br>
+					<a href="xiaomi.html"><button
+					class="btn btn-sm btn-outline-secondary" id="hu">Ir</button></a>
+				</div>
+				</div>
+			</div>
+            <div class="col-12 col-sm-6 col-md-4">
+				<div class="card mb-4 ">
+					<div id="diseño">
+					<div id="hy">
+
+					</div>
+					<br>
+					<a href="hyundai.html"><button
+					class="btn btn-sm btn-outline-secondary" id="hyu">Ir</button></a>
+				</div>
+				</div>
+			</div>
+            
+			
+			<div class="col-12 col-sm-6 col-md-4" id="cel">
+				<div class="card mb-4 ">
+					<div id="diseño">
+					<div id="tit">
+
+					</div>
+					<br>
+					<a href="cynosa.html"><button
+					class="btn btn-sm btn-outline-secondary" id="cyn">Ir</button></a>
+					</div>
+				</div>
+			</div>
+
+			
+           
+            
+            <div class="col-12 col-sm-6 col-md-4">
+				<div class="card mb-4 ">
+					<div id="diseño">
+					<div id="e">
+
+					</div>
+					<br>
+					<a href="evga.html"><button
+					class="btn btn-sm btn-outline-secondary" id="evg">Ir</button></a>
+				</div>
+				</div>
+			</div>
+         
+
+			
+			
+		
+			
+		</div>
+	</div>
+
+</div>
+
+<!--Footer-->
+<footer class="container py-5 my-5 border-top">
+	<div class="row">
+		<div class="col-12 col-md-3 order-2 order-md-1">
+			<small class="d-block text-muted">© 2022-2023 ShopITA</small>
+		</div>
+		<div class="col-6 col-md-3 order-1 order-md-2">
+			<h5>Características</h5>
+			<ul class="list-unstyled text-small">
+				<li><a class="text-muted">Veloces</a></li>
+				<li><a class="text-muted">Rápidos</a></li>
+				<li><a class="text-muted">Confiables</a></li>
+				<li><a class="text-muted">Disponibles</a></li>
+			</ul>
+		</div>
+		<div class="col-6 col-md-3 order-1 order-md-2">
+			<h5>Contactanos</h5>
+			<ul class="list-unstyled text-small">
+				<li><a href="https://www.facebook.com/groups/1282981182245094/?ref=share"
+						class="text-muted">Facebook</a></li>
+				<li><a class="text-muted">shopitaa3@gmail.com</a></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="vista/cynusa.js"></script>
+	<script src="vista/evga.js"></script>
+	<script src="vista/gam.js"></script>
+	<script src="vista/hp.js"></script>
+	<script src="vista/huawei.js"></script>
+	<script src="vista/hyundai.js"></script>
+	<script src="vista/samsung.js"></script>
+	<script src="vista/motorola.js"></script>
+	<script src="vista/xiaomi.js"></script>
+	<script src="vista/sony.js"></script>
+	<script src="Productos.json"></script>
+</body>
+
+</html>
